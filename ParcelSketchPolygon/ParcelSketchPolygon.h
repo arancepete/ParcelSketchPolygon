@@ -365,7 +365,7 @@ namespace ParcelSketchPolygon {
 			 // See if the mouse is over a corner point.
 	private: System::Boolean MouseIsOverCornerPoint
 			 (Point mouse_pt,
-				 [Runtime::InteropServices::Out] List<Point> ^hit_polygon,
+				 [Runtime::InteropServices::Out] List<Point>^% hit_polygon,
 				 [Runtime::InteropServices::Out] int %hit_pt)
 	{
 		// See if we're over a corner point.
@@ -393,7 +393,7 @@ namespace ParcelSketchPolygon {
 			 // See if the mouse is over a polygon's edge.
 	private: System::Boolean MouseIsOverEdge
 			 (Point mouse_pt,
-				 [Runtime::InteropServices::Out] List<Point> ^hit_polygon,
+				 [Runtime::InteropServices::Out] List<Point>^% hit_polygon,
 				 [Runtime::InteropServices::Out] int %hit_pt1,
 				 [Runtime::InteropServices::Out] int %hit_pt2,
 				 [Runtime::InteropServices::Out] Point %closest_point)
@@ -433,7 +433,7 @@ namespace ParcelSketchPolygon {
 	}
 
 			 // See if the mouse is over a polygon's body.
-	private: System::Boolean MouseIsOverPolygon(Point mouse_pt, [Runtime::InteropServices::Out] List<Point> ^hit_polygon)
+	private: System::Boolean MouseIsOverPolygon(Point mouse_pt, [Runtime::InteropServices::Out] List<Point>^% hit_polygon)
 	{
 		// Examine each polygon.
 		// Examine them in reverse order to check the ones on top first.
